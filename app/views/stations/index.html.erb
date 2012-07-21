@@ -1,0 +1,33 @@
+<h1>Listing stations</h1>
+
+<table>
+  <tr>
+    <th>Station type</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stations.each do |station| %>
+  <tr>
+    <td><%= station.station_type %></td>
+    <td><%= station.name %></td>
+    <td><%= station.address %></td>
+    <td><%= station.latitude %></td>
+    <td><%= station.longitude %></td>
+    <td><%= station.description %></td>
+    <td><%= link_to 'Show', station %></td>
+    <td><%= link_to 'Edit', edit_station_path(station) %></td>
+    <td><%= link_to 'Destroy', station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Station', new_station_path %>

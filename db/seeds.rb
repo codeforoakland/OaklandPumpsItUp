@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Station.create(station_type: "Citizen Sponsored",
+               name: "Adam's Rad Bike Pump",
+               address: "1023 62nd St. Oakland, CA",
+               description: "I have a bike pump outside by the mailbox.")

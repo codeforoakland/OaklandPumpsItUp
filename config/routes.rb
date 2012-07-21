@@ -1,4 +1,6 @@
 OaklandPumpsItUp::Application.routes.draw do
+  resources :stations
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
