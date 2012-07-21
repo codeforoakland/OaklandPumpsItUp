@@ -1,8 +1,12 @@
-class StationsController < ApplicationController
+  class StationsController < ApplicationController
   # GET /stations
   # GET /stations.json
   def index
-    @stations = Station.all
+    if params[:lat] && params[:lng]
+      @stations = Station.near([params[:lat], params[:lng]], 200)
+    else
+      @stations = Station.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
